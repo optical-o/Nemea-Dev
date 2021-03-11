@@ -1,0 +1,64 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "configure",
+            "command": "intercept-build ./configure --without-openssl",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+	    {
+            "type": "shell",
+            "label": "make",
+            "command": "intercept-build make",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+	    {
+            "type": "shell",
+            "label": "tests",
+            "command": "make check",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+	    {
+            "type": "shell",
+            "label": "clean",
+            "command": "make clean",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+	    {
+            "type": "shell",
+            "label": "distclean",
+            "command": "make distclean",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+	    {
+            "type": "shell",
+            "label": "bootstrap",
+            "command": "./bootstrap.sh",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

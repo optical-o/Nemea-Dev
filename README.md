@@ -20,20 +20,30 @@ Select from list the name of the ssh-config configured earlier.
 
 ## Visual studio code
 The visual studio code project comes with prepared tasks for configuring and building the nemea project.
+* `Ctrl+P task bootstrap`
 * `Ctrl+P task configure`
 * `Ctrl+Shift+B` or `Ctrl+P task make`
 * `Ctrl+P task test`
 * `Ctrl+P task clean`
 * `Ctrl+P task distclean`
 
+
 These task can be configured from repository files inside `.vscode`. There is also preconfigured cpp settings acording nemea C and C++ standards with enabled tracing for proper autocompletion using `intercept-build` generating `compile-commands.json`. 
 
+### Troubleshooting 
+If you are expeiriencing failing intelisenes or syntax errors inside vscode make sure that the file is being processed by the build system.
+
+Afterwards try reinstalling extensions inside the remote ssh machine.
+Extensions inside the VM are:
+
+* `maelvalais.autoconf`
+* `ms-vscode.cpptools`
 
 ## Filesystem
 The user is operating under `vargant` user with standard home `/home/vagrant`. The nemea repository is situated inside the `/home/vagrant/nemea-repo`.
 
 ## Python development
-Python libraries are install inside virtual environment located `/home/vagrant/nemea/venv` pytrap.
+Python libraries from pytrap, pycommon are installed in development mode inside the system.
 
 
 ## CLion support
