@@ -7,13 +7,10 @@
  cd "nemea-repo"
  ./bootstrap.sh &&
  intercept-build ./configure --without-openssl &&
- make clean &&
  intercept-build make -j4 &&
  sudo make install &&
  sudo ldconfig &&
-
- sudo python3 nemea-framework/pytrap/setup.py develop
- sudo python3 nemea-framework/pycommon/setup.py develop
- #make check
+ (cd nemea-framework/pytrap; python3 setup.py test; sudo python3 setup.py develop)
+ (cd nemea-framework/pycommon; python3 setup.py test; sudo python3 setup.py develop)
 )
 
