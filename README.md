@@ -18,6 +18,8 @@ Replace the default name with appropriate name.
 Inside vscode `Ctrl+Shift+P Remote-SSH: Connect to Host`
 Select from list the name of the ssh-config configured earlier.
 
+After connected to the VM for the first time, you should see pop-up on the right side to install recommended extensions. These will allow IDE functionality for the cpp and autoconf project.
+
 ## Visual studio code
 The visual studio code project comes with prepared tasks for configuring and building the nemea project.
 * `Ctrl+P task bootstrap`

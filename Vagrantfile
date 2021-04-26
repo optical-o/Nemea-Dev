@@ -40,6 +40,5 @@ Vagrant.configure(2) do |config|
   # Install dependencies, DISTANCE system, simple GUI
   config.vm.provision "shell", path: "scripts/install-centos.sh"
   config.vm.provision "shell", inline: "chown vagrant:vagrant /home/vagrant/*"
-  config.vm.provision "shell", path: "scripts/install-vscode-ext.sh", privileged: false
   config.vm.provision "shell", path: "scripts/install-nemea.sh", privileged: false
 end
