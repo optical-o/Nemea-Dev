@@ -3,6 +3,7 @@
  cd "/home/vagrant"
  git clone https://github.com/CESNET/Nemea.git "nemea-repo-temp" --recursive
  mv "nemea-repo-temp/"* "nemea-repo"
+ mv "nemea-repo-temp/.git" "nemea-repo"
  rm -r "nemea-repo-temp"
  cd "nemea-repo"
  ./bootstrap.sh &&
