@@ -8,6 +8,7 @@ This folder contains basic development environment for remove development using 
 * Working installation of **vagrant**
 
 ## Instalation
+        vagrant plugin install vagrant-sshfs
         vagrant up
         vagrant ssh-config
 

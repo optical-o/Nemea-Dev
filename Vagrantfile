@@ -15,6 +15,7 @@ Vagrant.configure(2) do |config|
     config.vm.synced_folder ".vscode", "/home/vagrant/nemea-repo/.vscode"
   elsif Vagrant.has_plugin?("vagrant-sshfs") then
     config.vm.synced_folder ".vscode", "/home/vagrant/nemea-repo/.vscode", type: "sshfs"
+    config.vm.synced_folder "nemea-repo", "/home/vagrant/nemea-repo/", type: "sshfs", reverse: true
   else
     config.vm.synced_folder ".vscode", "/home/vagrant/nemea-repo/.vscode", type: "rsync"
   end
