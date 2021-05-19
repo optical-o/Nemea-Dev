@@ -15,6 +15,11 @@ This folder contains basic development environment for remove development using 
 Copy the ssh settings inside you .sshd config. Inside vscode `Ctrl+Shift+P Remote-SSH: Open Configuration File`
 Replace the default name with appropriate name.
 
+### Local nemea repository
+It is possible to clone nemea repository and retain it inside host system by cloning nemea repository to this folder under nemea-repo.
+        git clone --recursive https://github.com/CESNET/nemea
+Afterwards the whole build and operation will be done inside this folder mounted by sshfs
+
 ## Visual studio code connect
 Inside vscode `Ctrl+Shift+P Remote-SSH: Connect to Host`
 Select from list the name of the ssh-config configured earlier.

@@ -1,10 +1,13 @@
 # Compile and install NEMEA
 (
  cd "/home/vagrant"
- git clone https://github.com/CESNET/Nemea.git "nemea-repo-temp" --recursive
- mv "nemea-repo-temp/"* "nemea-repo"
- mv "nemea-repo-temp/.git" "nemea-repo"
- rm -r "nemea-repo-temp"
+ if [ ! -d "/path/to/dir" ] 
+ then
+   git clone https://github.com/CESNET/Nemea.git "nemea-repo-temp" --recursive
+   mv "nemea-repo-temp/"* "nemea-repo"
+   mv "nemea-repo-temp/.git" "nemea-repo"
+   rm -r "nemea-repo-temp"
+ fi
  cd "nemea-repo"
  ./bootstrap.sh &&
  intercept-build ./configure --without-openssl &&
